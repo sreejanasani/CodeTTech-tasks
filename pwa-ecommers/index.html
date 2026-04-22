@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopEasy PWA</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0d6efd" />
+</head>
+
+<body>
+  <header>
+    <h1>🛒 ShopEasy</h1>
+
+    <div class="header-right">
+      <button id="cartBtn">🛍 Cart (<span id="cartCount">0</span>)</button>
+      <button id="notifyBtn">Enable Notifications</button>
+    </div>
+  </header>
+
+  <main>
+    <h2>Featured Products</h2>
+
+    <div class="products">
+      <div class="card">
+        <h3>Smart Watch</h3>
+        <p>₹1999</p>
+        <button class="addToCart" data-name="Smart Watch" data-price="1999">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Headphones</h3>
+        <p>₹1499</p>
+        <button class="addToCart" data-name="Headphones" data-price="1499">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Mobile Cover</h3>
+        <p>₹299</p>
+        <button class="addToCart" data-name="Mobile Cover" data-price="299">
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="card">
+        <h3>Bluetooth Speaker</h3>
+        <p>₹999</p>
+        <button class="addToCart" data-name="Bluetooth Speaker" data-price="999">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <!-- CART SECTION -->
+    <div class="cartBox" id="cartBox">
+      <h2>🛍 Your Cart</h2>
+      <ul id="cartItems"></ul>
+      <h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+      <div class="cartActions">
+        <button id="clearCart">Clear Cart</button>
+        <button id="closeCart">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>ShopEasy PWA © 2026 | Works Offline ✅</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
