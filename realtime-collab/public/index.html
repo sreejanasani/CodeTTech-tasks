@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CollabDoc Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <h1>📄 CollabDoc</h1>
+    <p class="tagline">Real-Time Collaborative Document Editor</p>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <input type="text" id="docTitle" placeholder="Enter Document Title..." />
+
+      <div class="btn-group">
+        <button id="saveBtn">💾 Save</button>
+        <button id="clearBtn">🗑 Clear</button>
+      </div>
+    </div>
+
+    <p class="status">
+      Status: <span id="saveStatus">Not Saved</span> |
+      Last Saved: <span id="lastSaved">---</span>
+    </p>
+
+    <textarea id="editor" placeholder="Start typing here..."></textarea>
+  </main>
+
+  <footer class="footer">
+    <p>CollabDoc © 2026 | Built using Node.js + Socket.IO + MongoDB</p>
+  </footer>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
